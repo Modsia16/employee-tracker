@@ -1,17 +1,7 @@
-//boilerplate code 
-
-const express = require('express');
 // Import and require mysql2
 const mysql = require('mysql2');
 //console table require
-const cTable = require('console.table');
-
-const PORT = process.env.PORT || 3001;
-const app = express();
-
-// Express middleware
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
+const inquirer = require('inquirer');
 
 // Connect to database
 const db = mysql.createConnection(
@@ -25,15 +15,6 @@ const db = mysql.createConnection(
   },
   console.log(`Connected to the departments_db database.`)
 );
-
-// Hardcoded query: DELETE FROM course_names WHERE id = 3;
-
-db.query(`DELETE FROM department_titles WHERE id = ?`, 3, (err, result) => {
-  if (err) {
-    console.log(err);
-  }
-  console.log(result);
-});
 
 // Query database
 db.query('SELECT * FROM department_titles', function (err, results) {
