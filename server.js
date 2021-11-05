@@ -13,19 +13,58 @@ const db = mysql.createConnection(
     password: 'Gh1opera88!iaz',
     database: 'departments_db'
   },
-  console.log(`Connected to the departments_db database.`)
 );
 
-// Query database
-db.query('SELECT * FROM department_titles', function (err, results) {
-  console.log(results);
+db.connect(function(err) {
+  if (err) throw err;
+  // run the start function after the connection is made to prompt the user
+  start();
 });
 
-// Default response for any other request (Not Found)
-app.use((req, res) => {
-  res.status(404).end();
-});
+//utilize package inquirer to prompt user
+function start() {
+  inquirer
+    .prompt({ 
+      name: 'action',
+      type: 'list',
+      message: 'What would you like to do?',
+      choices: [
+        "View Employees",
+        "View Departments",
+        "View Roles",
+        "Add Employee",
+        "Add Department",
+        "Add Role",
+        "View Employee by Department",
+        "Exit"]
+      })
+    .then(function(action) {
+      switch (action.action) {
+        case "View Employees":
+          viewEmployees();
+          break;
+        case "View Departments":
+          viewDepartments();
+          break;
+        case "View Roles":
+          viewRoles();
+          break;
+        case "Add Employee":
+          addEmployee();
+          break;
+        case "Add Department":
+          addDepartment();
+          break;
+        case "Add Role":
+          addRole();
+          break;
+        case "View Employee by Department":
+          viewEmployeeByDepartment();
+          break;
+        case "Exit":
+          exit();
+          break;
+      }
+    });
+  }
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
