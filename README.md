@@ -1,5 +1,12 @@
 # Employee Tracker - SQL
 
+## Table of Contents
+
+- [Objective](#objective)
+- [Criteria](#criteria)
+- [Install and Use](#install-and-use)
+- [Project Process](#project-process)
+
 ## Objective 
 
 Create an interface (Content Management System aka CMS) that allows non-developers to easily view and ineract with information stored in databases. As a business owner I want them to be able to view and manage their departments, roles, and employees in their company so that they can organize and plan their business.
@@ -20,7 +27,7 @@ When I choose to add a role, then I am prompted to enter the name, salary, and d
 When I choose to add an employee, then I am prompted to enter the employee’s first name, last name, role, and manager, and that employee is added to the database
 When I choose to update an employee role, then I am prompted to select an employee to update and their new role and this information is updated in the database
 
-## To Install 
+## Install and Use 
 
 You will need:
  - node.js
@@ -30,8 +37,20 @@ You will need:
 for your package.json
 
 Run in the CLI and navigate through the desired criteria 
+Preferred 
+run npm i 
+Mysql -u root -p
+Source the ./db/schema.sql and seeds
+run node server.js and scroll through what you would like to do
 
 ## Applicaton process
 
 Set up files 
 Create a package.json
+Schema and seeds files created for the database
+Tested the source and is fuctional
+Created fuctions for viewing employees, departments and roles
+Created functions for adding employees, departments and roles
+Created a function for updating an employee - this one needs to be fixed
+
+
