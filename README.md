@@ -61,4 +61,5 @@ got the functions to work in the CLI.
 
 ## Demo-link
 
-![Screencastify link](https://watch.screencastify.com/v/CTjmq06VK7idPmCe6xBt)
+![Screencastify Demo](./assets/HW12.gif)
+Click [here](https://watch.screencastify.com/v/CTjmq06VK7idPmCe6xBt) to go the the Screencastify demo
