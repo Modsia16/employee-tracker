@@ -6,6 +6,7 @@
 - [Criteria](#criteria)
 - [Install and Use](#install-and-use)
 - [Project Process](#project-process)
+- [Demo-link](#demo-link)
 
 ## Objective 
 
@@ -32,7 +33,8 @@ When I choose to update an employee role, then I am prompted to select an employ
 You will need:
  - node.js
  - Inquirer
- - MySQL
+ - MySQL2
+ - console.table
 
 for your package.json
 
@@ -45,12 +47,18 @@ run node server.js and scroll through what you would like to do
 
 ## Applicaton process
 
-Set up files 
-Create a package.json
+Set up the initial files for the server and db 
+Create a package.json 
 Schema and seeds files created for the database
 Tested the source and is fuctional
 Created fuctions for viewing employees, departments and roles
 Created functions for adding employees, departments and roles
-Created a function for updating an employee - this one needs to be fixed
+Created a function for updating an employee.
+Created function for deleting roles, departments and employees
 
+In general this project presented it's challenges, with some practice for the sql commands I 
+got the functions to work in the CLI.
 
+## Demo-link
+
+![Screencastify link](https://watch.screencastify.com/v/CTjmq06VK7idPmCe6xBt)
